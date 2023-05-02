@@ -5,17 +5,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/api/generated-db-types"
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/api/generated-db-types/**/*.ts"]
+        "outputPath": "dist/libs/api/generated-db-types",
+        "main": "libs/api/generated-db-types/src/index.ts",
+        "tsConfig": "libs/api/generated-db-types/tsconfig.lib.json",
+        "assets": ["libs/api/generated-db-types/*.md"]
       }
     }
   },

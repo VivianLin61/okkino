@@ -6,9 +6,7 @@ import { gql } from 'graphql-request';
 export type GetUsersVariables = Types.Exact<{ [key: string]: never; }>;
 
 
-export type GetUsers = { __typename?: 'Query', users: Array<{
-  [x: string]: any; __typename?: 'User', id: string, email: string, name?: string | null 
-}> };
+export type GetUsers = { __typename?: 'Query', users: Array<{ __typename?: 'User', id: string, email: string, name?: string | null }> };
 
 
 export const GetUsersDocument = /*#__PURE__*/ gql`
