@@ -10,13 +10,6 @@
       "options": {
         "outputPath": "dist/libs/api/generated-db-types"
       }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/api/generated-db-types/**/*.ts"]
-      }
     }
   },
   "tags": ["scope:api"]

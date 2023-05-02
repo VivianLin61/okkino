@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
 
-import viteTsConfigPaths from 'vite-tsconfig-paths';
-import dts from 'vite-plugin-dts';
-import { join } from 'path';
+import viteTsConfigPaths from 'vite-tsconfig-paths'
+import dts from 'vite-plugin-dts'
+import { join } from 'node:path'
 
 export default defineConfig({
   cacheDir: '../../../node_modules/.vite/api-generated-db-types',
@@ -12,12 +12,12 @@ export default defineConfig({
     dts({
       entryRoot: 'src',
       tsConfigFilePath: join(__dirname, 'tsconfig.lib.json'),
-      skipDiagnostics: true,
+      skipDiagnostics: true
     }),
 
     viteTsConfigPaths({
-      root: '../../../',
-    }),
+      root: '../../../'
+    })
   ],
 
   // Uncomment this if you are using workers.
@@ -39,11 +39,11 @@ export default defineConfig({
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
-      formats: ['es', 'cjs'],
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [],
-    },
-  },
-});
+      external: []
+    }
+  }
+})
