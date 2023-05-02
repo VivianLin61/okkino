@@ -5,10 +5,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/api/generated-db-types"
+        "outputPath": "dist/libs/api/generated-db-types",
+        "main": "libs/api/generated-db-types/src/index.ts",
+        "tsConfig": "libs/api/generated-db-types/tsconfig.lib.json",
+        "assets": ["libs/api/generated-db-types/*.md"]
       }
     }
   },

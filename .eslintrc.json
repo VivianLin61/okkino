@@ -5,13 +5,7 @@
     "sourceType": "module"
   },
   "ignorePatterns": ["**/*"],
-  "plugins": [
-    "@typescript-eslint",
-    "@nrwl/nx",
-    "unicorn",
-    "prettier",
-    "unused-imports"
-  ],
+  "plugins": ["@typescript-eslint", "@nrwl/nx", "unicorn", "prettier", "unused-imports"],
   "overrides": [
     {
       "extends": [
