@@ -14,13 +14,15 @@ const GET_HOME_BLOCKS = gql`
   query GetHomeImages {
     homeBlocks {
       id
-      title
-      imagePath
       navigationPath
-      rgbBackground {
-        r
-        g
-        b
+      image {
+        title
+        imagePath
+        rgbBackground {
+          r
+          g
+          b
+        }
       }
     }
   }
