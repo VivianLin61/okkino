@@ -15,9 +15,11 @@
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/web"
+          "outputPath": "dist/apps/web"
         },
-        "production": {}
+        "production": {
+          "outputPath": "dist/apps/web"
+        }
       }
     },
     "serve": {
